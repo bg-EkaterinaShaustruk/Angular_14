@@ -20,7 +20,7 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section id="slide_0" data-autoslide="2000">
+        <section id="slide_1" data-autoslide="2000">
           <h3 style="color: #cd2d17f7">
             Angular 14: New Features and Updates [2022]
           </h3>
@@ -31,7 +31,7 @@
             height="300"
           />
         </section>
-        <section id="slide_1" data-autoslide="2000">
+        <section id="slide_2" data-autoslide="2000">
           <section data-auto-animate data-autoslide="2000">
             <h2 style="color: #cd2d17f7">Introduction</h2>
           </section>
@@ -110,7 +110,7 @@
             </p>
           </section>
         </section>
-        <section id="slide_2" data-autoslide="2000"> 
+        <section id="slide_3" data-autoslide="2000"> 
           <section data-auto-animate data-autoslide="2000">
             <h3 style="color: #cd2d17f7">
               What’s New in Angular 14: Latest Features:
@@ -212,7 +212,7 @@
           </section>
 
         </section>
-        <section id="slide_3" data-autoslide="2000">
+        <section id="slide_4" data-autoslide="2000">
           <section data-auto-animate data-autoslide="2000">
             <h3 style="color: #cd2d17f7">
               What’s New in Angular 14: Latest Features:
@@ -234,7 +234,7 @@
             <p style="font-size: 30px;">Typed forms ensure that the values inside of form controls, groups, and arrays are type safe across the entire API surface. This enables safer forms, especially for deeply nested complex cases.</p>
           </section>
         </section>
-        <section id="slide_4" data-autoslide="2000">
+        <section id="slide_5" data-autoslide="2000">
           <section data-auto-animate data-autoslide="2000">
             <h3 style="color: #cd2d17f7">
               What’s New in Angular 14: Latest Features:
@@ -259,7 +259,131 @@
               <li>you don’t need to worry about looking for commands on the internet.</li>
             </ul>         
           </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">Angular CLI Auto-Completion:</p>
+            <ul style="font-size: 30px;">
+              <li>you can improve productivity by delivering the required commands to create modules, directives, and components for your new/existing project</li>
+              <li>you don’t need to worry about looking for commands on the internet</li>
+              <li>you can avail more auto-completion options from the ng create command options list</li>
+            </ul>         
+          </section>
         </section>
+        <section id="6" data-autoslide="2000">
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features:
+            </h3>
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features:
+            </h3>
+            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>   
+            <ul>Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time</ul>
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>   
+            <ul style="font-size: 30px;">Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time
+              <li>Catch the invalid “Banana in a box” error on your two-way data bindings <br>([]) instead of [()] <br>the banana should go in the box [()] </li>
+            </ul>
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>   
+            <ul style="font-size: 30px;">Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time
+              <li>Catch the invalid “Banana in a box” error on your two-way data bindings <br>([]) instead of [()] <br>the banana should go in the box [()] </li>
+              <li>Catch nullish coalescing on non-nullable values</li>
+              <pre style="font-size: 16px;"><code>
+                import {Component} from '@angular/core';
+
+                @Component({
+                  // Template displays `foo` if present, falls back to 'bar' if it is `null`
+                  // or `undefined`.
+                  template: `
+                {{ foo ?? 'bar' }}
+                `,
+                  // …
+                })
+                class MyComponent {
+                  // `foo` is declared as a `string` which *cannot* be `null` or `undefined`.
+                  foo: string = 'test';
+                }
+              </code></pre>
+            </ul>
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>   
+            <ul style="font-size: 20px;">Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time           
+              <li>Catch nullish coalescing on non-nullable values</li>
+              <pre style="font-size: 14px;"><code>
+                import {Component} from '@angular/core';
+                @Component({
+                  // Template displays `foo` if present, falls back to 'bar' if it is `null`
+                  // or `undefined`.
+                  template: `
+                {{ foo ?? 'bar' }}
+                `,
+                  // …
+                })
+                class MyComponent {
+                  // `foo` is declared as a `string` which *cannot* be `null` or `undefined`.
+                  foo: string = 'test';
+                }
+              </code></pre>
+              <pre style="font-size: 14px;"><code>
+                import {Component} from '@angular/core';
+                @Component({
+                  // Template displays `foo` if present, falls back to 'bar' if it is `null`
+                  // or `undefined`.
+                  template: `
+                {{ foo ?? 'bar' }}
+                `,
+                  // …
+                })
+                class MyComponent {
+                  // `foo` is declared as a `string` which *cannot* be `null` or `undefined`.
+                  foo: string = 'test';
+                }
+              </code></pre>
+            </ul>
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>   
+            <ul style="font-size: 20px;">Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time           
+              <li>Catch nullish coalescing on non-nullable values</li>
+              <pre><code>
+                import {Component} from '@angular/core';
+               @Component({
+                 template: `
+               {{ foo ?? 'bar' }}
+               `,
+                 // …
+               })
+               class MyComponent {
+                 // `foo` is now nullable. If it is ever set to `null`, 'bar' will be displayed.
+                 foo: string | null = 'test';
+               }
+              </code></pre>
+              <pre><code>
+                import {Component} from '@angular/core';
+                 @Component({
+                   // Template always displays `foo`, which is guaranteed to never be `null` or
+                   // `undefined`.
+                   template: `
+                 {{ foo }}
+                 `,
+                   // …
+                 })
+                 class MyComponent {
+                   foo: string = 'test';
+                 }
+              </code></pre>
+            </ul>
+          </section>
+        </section>
+
       </div>
     </div>
 
