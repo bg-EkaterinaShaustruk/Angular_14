@@ -1,48 +1,282 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/league.css" />
+    <link rel="stylesheet" href="css/custom.scss" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="slide_0" data-autoslide="2000">
+          <h3 style="color: #cd2d17f7">
+            Angular 14: New Features and Updates [2022]
+          </h3>
+          <img
+            src="./src/angular.svg"
+            alt="icon Angular"
+            width="300"
+            height="300"
+          />
+        </section>
+        <section id="slide_1" data-autoslide="2000">
+          <section data-auto-animate data-autoslide="2000">
+            <h2 style="color: #cd2d17f7">Introduction</h2>
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <h2
+              style="color: #cd2d17f7"
+              data-auto-animate
+              data-autoslide="2000"
+            >
+              Introduction
+            </h2>
+            <p>The Type-script based web application framework</p>
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <h2 style="color: #cd2d17f7">Introduction</h2>
+            <p>The Type-script based web application framework</p>
+            <p>
+              Angular is dominated the world of open-source JavaScript
+              frameworks
+            </p>
+            <div>
+              <img
+                src="./src/icons8-google.svg"
+                alt="icon google"
+                height="50"
+              />
+              <img
+                src="./src/netflix-1-logo-svgrepo-com.svg"
+                alt="icon netflix"
+                height="50"
+              />
+              <img
+                src="./src/Forbes_logo_PNG1.png"
+                alt="icon forbes"
+                height="50"
+              />
+              <img
+                src="./src/icons8-paypal-48.png"
+                alt="icon paypal"
+                height="50"
+              />
+            </div>
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <h2 style="color: #cd2d17f7">Introduction</h2>
+            <p>The Type-script based web application framework</p>
+            <p>
+              Angular is dominated the world of open-source JavaScript
+              frameworks
+            </p>
+            <div>
+              <img
+                src="./src/icons8-google.svg"
+                alt="icon google"
+                height="50"
+              />
+              <img
+                src="./src/netflix-1-logo-svgrepo-com.svg"
+                alt="icon netflix"
+                height="50"
+              />
+              <img
+                src="./src/Forbes_logo_PNG1.png"
+                alt="icon forbes"
+                height="50"
+              />
+              <img
+                src="./src/icons8-paypal-48.png"
+                alt="icon paypal"
+                height="50"
+              />
+            </div>
+            <p>
+              On June 2, 2022, the Angular community released the brand-new
+              Angular 14.
+            </p>
+          </section>
+        </section>
+        <section id="slide_2" data-autoslide="2000"> 
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features:
+            </h3>
+          </section>       
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features:
+            </h3>       
+            <p style="color: #cd2d17f7">
+              Standalone Components
+            </p>
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">
+              Standalone Components
+            </p>
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">
+              Standalone Components
+            </p>
+            <p style="font-size: 25px">
+              Each component in Angular’s earlier iterations required a module
+              association
+            </p>
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">
+              Standalone Components
+            </p>
+            <p data-auto-animate data-autoslide="2000" style="font-size: 25px">
+              Each component in Angular’s earlier iterations required a module
+              association.
+              <p data-auto-animate data-autoslide="2000" style="font-size: 25px">The application would fail if the declarations array
+                of a parent module is not linked with every component.</p> 
+            </p>            
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">
+              Standalone Components
+            </p>
+            <p data-auto-animate data-autoslide="2000" style="font-size: 25px">
+              Each component in Angular’s earlier iterations required a module
+              association.
+              <p data-auto-animate data-autoslide="2000" style="font-size: 25px">The application would fail if the declarations array
+                of a parent module is not linked with every component.</p> 
+            </p>
+            <p style="font-size: 25px">
+              With standalone components, directives and pipes, the standalone:
+              true flag allows you to add imports directly in your @Component()
+              without an @NgModule().
+            </p>
+          </section>         
+          <section data-auto-animate data-autoslide="2000">
+            <p style="color: #cd2d17f7">
+              Standalone Components
+            </p>
+            <pre><code data-trim data-noescape>
+              @Component({
+                selector: 'app-root',
+                templateUrl: './app.component.html',
+                styleUrls: ['./app.component.scss'],
+                standalone: true,
+                imports: [RouterModule, TitleComponent],
+              })
+              export class AppComponent {}
+            </code></pre>        
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <p style="color: #cd2d17f7">
+              Standalone Components
+            </p>         
+            <p style="font-size: 16px">ng generate component contuct-us  --standalone</p>
+            <pre style="font-size: 16px"><code>
+              export const appRoutes: Routes = [
+            ...
+            {
+              path: 'contact-us',
+              loadComponent: () =>
+                import('./contact-us/contact-us.component').then(
+                  (c) => c.ContactUsComponent
+                ),
+            },
+          ];
+            </code></pre>
+          </section>         
+          <section data-auto-animate data-autoslide="2000">
+            <p style="color: #cd2d17f7">
+              Standalone Components
+            </p>   
+            <p>
+              Summary
+            </p>
+            <ul>
+              <li>we will be able to develop an application without any modules even and even AppModule.</li>
+              <li>it will reduce the total number of modules.</li>
+            </ul>           
+          </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        </section>
+        <section id="slide_3" data-autoslide="2000">
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features:
+            </h3>
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features:
+            </h3>
+            <p style="color: #cd2d17f7">Strictly Typed Forms:</p>
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <p style="color: #cd2d17f7">Strictly Typed Forms:</p>
+            <p style="font-size: 30px;">Reactive Forms will be type-safe with Angular v14</p>
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <p style="color: #cd2d17f7;">Strictly Typed Forms:</p>
+            <p style="font-size: 30px;">Reactive Forms will be type-safe with Angular v14</p>
+            <p style="font-size: 30px;">Typed forms ensure that the values inside of form controls, groups, and arrays are type safe across the entire API surface. This enables safer forms, especially for deeply nested complex cases.</p>
+          </section>
+        </section>
+        <section id="slide_4" data-autoslide="2000">
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features:
+            </h3>
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features:
+            </h3>
+            <p style="color: #cd2d17f7">Angular CLI Auto-Completion:</p>
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">Angular CLI Auto-Completion:</p>
+            <ul style="font-size: 30px;">
+              <li>you can improve productivity by delivering the required commands to create modules, directives, and components for your new/existing project</li>              
+            </ul>         
+          </section>
+          <section data-auto-animate data-autoslide="2000">           
+            <p style="color: #cd2d17f7">Angular CLI Auto-Completion:</p>
+            <ul style="font-size: 30px;">
+              <li>you can improve productivity by delivering the required commands to create modules, directives, and components for your new/existing project</li>
+              <li>you don’t need to worry about looking for commands on the internet.</li>
+            </ul>         
+          </section>
+        </section>
+      </div>
+    </div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
