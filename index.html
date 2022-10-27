@@ -268,15 +268,15 @@
             </ul>         
           </section>
         </section>
-        <section id="6" data-autoslide="2000">
+        <section id="slide_6" data-autoslide="2000">
           <section data-auto-animate data-autoslide="2000">
             <h3 style="color: #cd2d17f7">
-              What’s New in Angular 14: Latest Features:
+              What’s New in Angular 14: Latest Features
             </h3>
           </section>
           <section data-auto-animate data-autoslide="2000">
             <h3 style="color: #cd2d17f7">
-              What’s New in Angular 14: Latest Features:
+              What’s New in Angular 14: Latest Features
             </h3>
             <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>
           </section>
@@ -381,9 +381,79 @@
                  }
               </code></pre>
             </ul>
+          </section>     
+        </section>
+        <section id="slide_7" data-autoslide="2000">
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features
+            </h3>
+          </section>
+          <section data-auto-animate data-autoslide="2000">
+            <h3 style="color: #cd2d17f7">
+              What’s New in Angular 14: Latest Features
+            </h3>
+            <p style="color: #cd2d17f7">Streamlined page title accessibility</p>
+          </section>
+          <section data-auto-animate data-autoslide="2000">         
+            <p style="color: #cd2d17f7">Streamlined page title accessibility</p>
+            <ul>
+              <li>best practice is ensuring that your app’s page titles uniquely communicate the page’s contents</li>
+            </ul>           
+          </section>
+          <section data-auto-animate data-autoslide="2000">         
+            <p style="color: #cd2d17f7">Streamlined page title accessibility</p>
+            <ul>
+              <li>best practice is ensuring that your app’s page titles uniquely communicate the page’s contents</li>
+              <li>adding a title now requires no additional imports and is strongly typed</li>
+            </ul> 
+          </section>
+          <section data-auto-animate data-autoslide="2000">         
+            <p style="color: #cd2d17f7">Streamlined page title accessibility</p>
+              <pre style="font-size: 14px;"><code>
+                const routes: Routes = [{
+                  path: 'home',
+                  component: HomeComponent
+                  title: 'My App - Home'  // <-- Page title
+                }, {
+                  path: 'about',
+                  component: AboutComponent,
+                  title: 'My App - About Me'  // <-- Page title
+                }];
+              </code></pre>         
+          </section>
+          <section data-auto-animate data-autoslide="2000">       
+            <p style="color: #cd2d17f7">Streamlined page title accessibility</p>
+            <p style="font-size: 16px;">You can configure more complex title logic by providing a custom TitleStrategy</p>
+            <pre style="font-size: 14px;"><code>
+              const routes: Routes = [{
+                path: 'home',
+                component: HomeComponent
+              }, {
+                path: 'about',
+                component: AboutComponent,
+                title: 'About Me'  // <-- Page title
+              }];            
+              @Injectable()
+              export class TemplatePageTitleStrategy extends TitleStrategy {
+                override updateTitle(routerState: RouterStateSnapshot) {
+                  const title = this.buildTitle(routerState);
+                  if (title !== undefined) {
+                    document.title = `My App - ${title}`;
+                  } else {
+                    document.title = `My App - Home`;
+                };
+              };            
+              @NgModule({
+                …
+                providers: [{provide: TitleStrategy,  useClass: TemplatePageTitleStrategy}]
+              })
+              class MainModule {}
+              </code></pre>
           </section>
         </section>
-
+        
+       
       </div>
     </div>
 
