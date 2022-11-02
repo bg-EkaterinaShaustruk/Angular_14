@@ -38,8 +38,7 @@
           <section data-auto-animate >
             <h2
               style="color: #cd2d17f7"
-              data-auto-animate
-              
+              data-auto-animate  
             >
               Introduction
             </h2>
@@ -108,6 +107,10 @@
               On June 2, 2022, the Angular community released the brand-new
               Angular 14.
             </p>
+          </section>
+          <section data-auto-animate >
+            <h3 style="color: #cd2d17f7">Introduction</h3>
+           <img src="/src/Angular-14-New-Features-and-Updates-.jpg">
           </section>
         </section>
         <section id="slide_3" >             
@@ -189,9 +192,9 @@
             </code></pre>
           </section>         
           <section data-auto-animate >
-            <p style="color: #cd2d17f7">
+            <h3 style="color: #cd2d17f7">
               Standalone Components
-            </p>   
+            </h3>   
             <p>
               Summary
             </p>
@@ -210,28 +213,24 @@
             <p style="color: #cd2d17f7">Strictly Typed Forms:</p>
           </section>
           <section data-auto-animate >
-            <p style="color: #cd2d17f7">Strictly Typed Forms:</p>
+            <h3 style="color: #cd2d17f7">Strictly Typed Forms:</h3>
             <p style="font-size: 30px;">Reactive Forms will be type-safe with Angular v14</p>
           </section>
           <section data-auto-animate >
-            <p style="color: #cd2d17f7;">Strictly Typed Forms:</p>
+            <h3 style="color: #cd2d17f7;">Strictly Typed Forms:</h3>
             <p style="font-size: 30px;">Reactive Forms will be type-safe with Angular v14</p>
             <p style="font-size: 30px;">Typed forms ensure that the values inside of form controls, groups, and arrays are type safe across the entire API surface. This enables safer forms, especially for deeply nested complex cases.</p>
           </section>          
           <section ata-auto-animate >
-            <p style="color: #cd2d17f7;">Strictly Typed Forms:</p>
+            <h3 style="color: #cd2d17f7;">Strictly Typed Forms:</h3>
             <p style="font-size: 30px;">Update schematics allows for incremental migration to typed forms, so you can gradually add typing to your existing
               forms with full backwards compatibility.
             </p>
-            <p style="font-size: 30px;">ng update will replace all form classes with untyped versions (for example, FormGroup -> UntypedFormGroup).</p>
+            <p style="font-size: 30px;"><em style="color: red;">ng update</em> will replace all form classes with untyped versions (for example, FormGroup -> UntypedFormGroup).</p>
+            <p style="font-size: 30px;">You can then enable types at your own pace (for example, UntypedFormGroup -> FormGroup).</p>
           </section>
           <section ata-auto-animate >
-            <p style="color: #cd2d17f7;">Strictly Typed Forms:</p>
-            <p style="font-size: 25px;">Update schematics allows for incremental migration to typed forms, so you can gradually add typing to your existing
-              forms with full backwards compatibility.
-            </p>
-            <p style="font-size: 25px;"><i>ng update</i> will replace all form classes with untyped versions (for example, FormGroup -> UntypedFormGroup).</p>
-            <p style="font-size: 25px;">You can then enable types at your own pace (for example, UntypedFormGroup -> FormGroup).</p>
+            <p style="color: #cd2d17f7;">Strictly Typed Forms:</p>                     
             <pre style="font-size: 16px;"><code>// v13 untyped form
               const cat = new FormGroup({
                  name: new FormGroup(
@@ -268,7 +267,7 @@
           </section>
           <section>
             <h3 style="color: #cd2d17f7">Angular CLI Auto-Completion:</h3>
-            <p>You can also manually run <em>ng completion</em> and the CLI will automatically set this up for you.</p>
+            <p>You can also manually run <em style="color: red;">ng completion</em> and the CLI will automatically set this up for you</p>
           </section>        
         </section>
         <section id="slide_6" >         
@@ -279,70 +278,20 @@
             <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>
           </section>
           <section data-auto-animate >           
-            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>   
-            <ul>Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time</ul>
-          </section>
-          <section data-auto-animate >           
-            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>   
-            <ul style="font-size: 30px;">Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time
-              <li>Catch the invalid “Banana in a box” error on your two-way data bindings <br>([]) instead of [()] <br>the banana should go in the box [()] </li>
+            <h3 style="color: #cd2d17f7">Enhanced template diagnostics in compiler</h3>   
+            <ul>
+              <li>In previous versions the compiler would just stop executing if it encountered a problem and did not inform you of what the issue was</li>
+              <li>Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time</li>                        
             </ul>
           </section>
           <section data-auto-animate >           
-            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>   
-            <ul style="font-size: 30px;">Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time
-              <li>Catch nullish coalescing on non-nullable values</li>
-              <pre style="font-size: 16px;"><code>
-                import {Component} from '@angular/core';
-
-                @Component({
-                  // Template displays `foo` if present, falls back to 'bar' if it is `null`
-                  // or `undefined`.
-                  template: `
-                {{ foo ?? 'bar' }}
-                `,
-                  // …
-                })
-                class MyComponent {
-                  // `foo` is declared as a `string` which *cannot* be `null` or `undefined`.
-                  foo: string = 'test';
-                }
-              </code></pre>
+            <h3 style="color: #cd2d17f7">Enhanced template diagnostics in compiler</h3>   
+            <ul style="font-size: 30px;">
+              <li>Catch the invalid “Banana in a box” error on your two-way data bindings <br>([]) instead of [()] <br>the banana should go in the box [()]</li>
+              <br>
+              <em style="color: rgb(195, 153, 153);">Warning: src/app/app.component.ts:7:25 - warning NG8101: In the two-way binding syntax the parentheses should be inside the brackets</em>
             </ul>
           </section>         
-          <section data-auto-animate >           
-            <p style="color: #cd2d17f7">Enhanced template diagnostics in compiler</p>   
-            <ul style="font-size: 20px;">Diagnostics give compile-time warnings with precise, actionable suggestions for your templates, catching bugs before run-time           
-              <li>Catch nullish coalescing on non-nullable values</li>
-              <pre><code>
-                import {Component} from '@angular/core';
-               @Component({
-                 template: `
-               {{ foo ?? 'bar' }}
-               `,
-                 // …
-               })
-               class MyComponent {
-                 // `foo` is now nullable. If it is ever set to `null`, 'bar' will be displayed.
-                 foo: string | null = 'test';
-               }
-              </code></pre>
-              <pre><code>
-                import {Component} from '@angular/core';
-                 @Component({
-                   // Template always displays `foo`, which is guaranteed to never be `null` or
-                   // `undefined`.
-                   template: `
-                 {{ foo }}
-                 `,
-                   // …
-                 })
-                 class MyComponent {
-                   foo: string = 'test';
-                 }
-              </code></pre>
-            </ul>
-          </section>     
         </section>
         <section id="slide_7" >          
           <section data-auto-animate >
@@ -352,7 +301,7 @@
             <p style="color: #cd2d17f7">Streamlined page title accessibility</p>
           </section>
           <section data-auto-animate >         
-            <p style="color: #cd2d17f7">Streamlined page title accessibility</p>
+            <h3 style="color: #cd2d17f7">Streamlined page title accessibility</h3>
             <ul>
               <li>best practice is ensuring that your app’s page titles uniquely communicate the page’s contents</li>
             </ul>           
@@ -406,11 +355,7 @@
               })
               class MainModule {}
               </code></pre>
-          </section>
-          <section data-auto-animate >           
-            <p style="color: #cd2d17f7">Streamlined page title accessibility</p>
-            <img></section>
-          </section>
+          </section>       
         </section>
         <section id="slide_8" >         
           <section data-auto-animate >     
@@ -431,25 +376,8 @@
               <li>In Angular 14, the CDK menu and Dialog have been driven to a stable Angular version. Nonetheles, the new CDK primitives allow the creation of custom components that are better accessible</li>
             </ul>          
           </section>
-        </section>
-        <section id="slide_9" >        
-          <section data-auto-animate>
-            <h3 style="color: #cd2d17f7">
-              What’s New in Angular 14: Latest Features
-            </h3>
-            <p style="color: #cd2d17f7">Angular DevTools is available offline and in Firefox</p>
-          </section>        
-          <section data-auto-animate>           
-            <h3 style="color: #cd2d17f7">Angular DevTools is available offline <br>and in Firefox</h3>
-            <ul>
-              <li>
-              The Angular DevTools debugging extension now supports offline use
-              </li>
-              <li>For Firefox users, find the extension in the Add-ons for Mozilla.</li>
-            </ul>
-          </section>
-        </section>
-        <section id="slide_10" >          
+        </section>       
+        <section id="slide_9" >          
           <section>
             <h3 style="color: #cd2d17f7">
               What’s New in Angular 14: Latest Features
@@ -460,6 +388,13 @@
             <p style="color: #cd2d17f7">More Powerful Dependency Injection</p>
             <p>we will be able to use the <strong>inject()</strong> in components, directives, and pipes</p>
           </section>
+        </section>
+        <section id="slide_10">
+          <h3 style="color: #cd2d17f7">Migration from Angular 12/13 to Angular 14</h3>
+          <p>To install your required version of Angular CLI globally, start by running the following on the command-line interface:</p>
+          <p><em style="color: rgb(195, 153, 153);">npm install –global @angular/cli@next </em></p>
+          <p>make sure you are using Node 14.15.0 or later as advised by the Angular team. From the command-line interface, run the command:</p>
+          <p><em style="color: rgb(195, 153, 153);">ng update @angular/core@14 @angular/cli@14 </em></p>
         </section>
        
         
