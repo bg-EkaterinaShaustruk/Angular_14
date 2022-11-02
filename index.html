@@ -378,15 +378,37 @@
           </section>
         </section>       
         <section id="slide_9" >          
-          <section>
+          <section data-auto-animate>         
             <h3 style="color: #cd2d17f7">
               What’s New in Angular 14: Latest Features
             </h3>
             <p style="color: #cd2d17f7">More Powerful Dependency Injection</p>
-          </section>
+          </section  data-auto-animate>
           <section>            
-            <p style="color: #cd2d17f7">More Powerful Dependency Injection</p>
+            <h3 style="color: #cd2d17f7">More Powerful Dependency Injection</h3>
             <p>we will be able to use the <strong>inject()</strong> in components, directives, and pipes</p>
+          </section>
+          <section  data-auto-animate>
+            <h3 style="color: #cd2d17f7">More Powerful Dependency Injectio</h3>
+            <pre><code>export function getBooks() {
+              const http = inject(HttpClient);
+              return http.get('/api/getBooks');
+            }            
+            @Component({
+              selector: 'app-books',
+              templateUrl: './books.component.html',
+              styleUrls: ['./books.component.scss'],
+            })
+            export class BooksComponent {
+              readonly books$ = getBooks();
+            }</code></pre>
+          </section>
+          <section  data-auto-animate>
+            <h3 style="color: #cd2d17f7">More Powerful Dependency Injection</h3>
+            <p>The injector allows for the dependency injection behavior to be customized within the specific template.
+              <br>
+              This enables cleaner APIs for authoring reusable components and for component primitives in Angular CDK.              
+            </p>
           </section>
         </section>
         <section id="slide_10">
